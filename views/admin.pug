@@ -1,0 +1,10 @@
+extends base
+
+mixin options(link, text)
+    br
+    a(href=`${link}`) #{text}
+
+block content
+    br
+    +options('/users', 'Wyświetl użytkowników')
+    +options('/courses', 'Wyświetl kursy')

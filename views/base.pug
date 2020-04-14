@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title TradeSchool | #{title}
+        meta(charset='UTF-8')
+    body
+        if user
+            button.logout Wyloguj
+            br
+            a(href="/me") Moje konto
+            br
+            a(href="/") Strona główna
+        else
+            a(href="/login") Logowanie
+            br
+            a(href="/signup") Rejestracja
+            
+        block content
+            h1 This is a placeholder heading
+
+        script(src='/bundle.js')

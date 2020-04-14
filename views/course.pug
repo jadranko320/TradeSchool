@@ -1,0 +1,24 @@
+extends base
+
+block content
+  h2 #{course.name}
+  
+  each subject in course.subjects
+    h4 #{subject.name} - #{subject.teacher.name} #{subject.teacher.surname}
+
+  h2 Aktualizuj kurs
+  form.update-course
+    div
+      label(for='name') Nazwa kursu
+      input#name(type='text')
+    div
+      label(for='description') Opis kursu
+      textarea#description(cols='20' rows='3' type='text')
+    div
+      label(for='subject-first') Przedmiot 1
+      input#subject-first(type='text')
+    div
+      label(for='subject-second') Przedmiot 2
+      input#subject-second(type='text')
+    div
+      button Aktualizuj

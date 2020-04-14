@@ -1,0 +1,27 @@
+extends base
+
+block content
+  br
+  br
+
+  select.limit
+    option Liczba wyszukań
+    option 3
+    option 5
+    option 7
+    option 10
+
+  div.page
+    button#previous Poprzednia strona
+    button#next Następna strona
+
+  select.select-tag
+    option Sortowanie
+    option A-Z
+    option Z-A
+    option Najnowsze
+    option Najstarsze
+
+  each user in users
+    div
+      a(href=`/users/${user.id}`) #{user.surname} #{user.name}

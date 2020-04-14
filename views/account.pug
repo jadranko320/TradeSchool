@@ -1,0 +1,33 @@
+extends base
+
+block content
+    div
+        h2 Email Update
+        form.user-data
+            div
+                label(for='email') Email
+                input#email(type='email')
+            div
+                button Update
+
+        h2 Password Update
+        form.user-password
+            div
+                label(for='password-current') Current Password
+                input#password-current(type='password')
+            div
+                label(for='password') Password
+                input#password(type='password')
+            div
+                label(for='password-confirm') Confirm Your New Password
+                input#password-confirm(type='password')
+            div
+                button.btn-update Update
+        button.btn-delete Delete account
+
+    div
+        p= user.name
+        p= user.surname
+
+    if (user.role === 'admin')
+        a(href='/admin') Opcje administratora

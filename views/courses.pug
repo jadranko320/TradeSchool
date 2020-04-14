@@ -1,0 +1,7 @@
+extends base
+
+block content
+  br
+  each course in courses
+    div
+      a(href=`/courses/${course.id}`) #{course.name}
